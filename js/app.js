@@ -60,7 +60,21 @@
       focus: '50% 8%',
       credit: '',
       summary: 'Record earnings and spending, follow cash flow and check balances. Connect your income and expense tracker to work with it here.',
-      embedUrl: ''
+      embedUrl: '',
+      downloads: [
+        {
+          label: 'Windows Installer',
+          meta: '.exe · 22.3 MB',
+          url: 'https://github.com/icecoldcoffeemachiatomixed/income-expense-system/releases/download/v1.0.0/IncomeExpenseSystem-Setup-1.0.0.exe',
+          sha256: '4d8c47fe2d3a6200a623a27a6afba21d4babbddb0f7cd17aeb7056ebf9b4c473'
+        },
+        {
+          label: 'Portable',
+          meta: '.zip · 34.7 MB',
+          url: 'https://github.com/icecoldcoffeemachiatomixed/income-expense-system/releases/download/v1.0.0/IncomeExpenseSystem-1.0.0-portable.zip',
+          sha256: 'd97d2abb0aab260214090146fac02143bde6336bf59941ee6b7f0f3335fed0e4'
+        }
+      ]
     },
     {
       id: 'production',
@@ -135,6 +149,15 @@
             </div>
           </div>
           <p class="summary">${esc(t.summary)}</p>
+          ${t.downloads ? `
+          <div class="downloads">
+            <span class="downloads-title">Download for Windows · v1.0.0</span>
+            ${t.downloads.map((d) => `
+              <a class="download-link" href="${esc(d.url)}" rel="noopener" title="SHA-256: ${esc(d.sha256)}">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                <span>${esc(d.label)}<small>${esc(d.meta)}</small></span>
+              </a>`).join('')}
+          </div>` : ''}
           <div class="card-actions">
             <button class="btn btn-primary js-launch" type="button" aria-expanded="false" aria-controls="ws-${t.id}"></button>
             <span class="status-dot" data-status></span>

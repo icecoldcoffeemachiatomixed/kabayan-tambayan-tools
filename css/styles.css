@@ -376,6 +376,18 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tool-card .js-launch:hover { background: color-mix(in srgb, var(--tone) 85%, #000); }
 .tool-card[data-tone="gold"] .js-launch { color: #2B211A; }
 .summary { margin: 0; color: var(--muted); font-size: .95rem; }
+.downloads { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.downloads-title { flex-basis: 100%; font-size: .78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.download-link {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); text-decoration: none; font-size: .85rem; font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.download-link:hover { border-color: var(--border-strong); background: var(--bg-alt); }
+.download-link:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+.download-link svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.download-link span { display: flex; flex-direction: column; line-height: 1.15; }
+.download-link small { font-size: .72rem; font-weight: 500; color: var(--muted); }
 .card-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 4px; flex-wrap: wrap; }
 .status-dot { font-size: .8rem; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
 .status-dot::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong); }
