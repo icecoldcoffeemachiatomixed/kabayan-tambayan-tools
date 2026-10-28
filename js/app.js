@@ -48,8 +48,7 @@
       focus: '50% 22%',
       credit: '',
       summary: 'Store, approve and organize records in one place. Connect your data management system to review and update entries inline.',
-      // ?embed=true skips Streamlit's auth redirect, which fails inside a cross-site iframe.
-      embedUrl: 'https://dental-management-dashboard.streamlit.app/?embed=true'
+      embedUrl: ''
     },
     {
       id: 'finance',
@@ -87,7 +86,8 @@
       focus: '50% 14%',
       credit: 'Alden Anderson · 360nomad.org',
       summary: 'Measure output, yields and performance over time. Connect your production analysis dashboard to review results side by side with your other apps.',
-      embedUrl: ''
+      // ?embed=true skips Streamlit's auth redirect, which fails inside a cross-site iframe.
+      embedUrl: 'https://dental-management-dashboard.streamlit.app/?embed=true'
     }
   ];
 
