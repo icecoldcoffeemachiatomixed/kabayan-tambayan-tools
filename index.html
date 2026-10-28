@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kabayan-Tambayan Tools</title>
+  <meta name="description" content="A central hub of integrated tools for Filipinos at home and abroad: balikbayan box packing, remittance comparison, recipe scaling and fiesta planning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tagalog&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('kt:theme');
+        if (t) document.documentElement.setAttribute('data-theme', JSON.parse(t));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Philippine flag (2:1): blue over red, white equilateral triangle, eight-rayed sun, three stars -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <path id="ph-star" d="M0-30 6.74-9.27h21.79L10.9 3.54l6.73 20.73L0 11.46l-17.63 12.81 6.73-20.73-17.63-12.81h21.79z"/>
+      <g id="ph-ray">
+        <path d="M0-118 9-64H-9z"/>
+        <path d="M-15-104-1.5-66-10-63zM15-104 10-63l-8.5-3z"/>
+      </g>
+    </defs>
+    <symbol id="ph-flag" viewBox="0 0 1200 600">
+      <rect width="1200" height="300" fill="#0038A8"/>
+      <rect y="300" width="1200" height="300" fill="#CE1126"/>
+      <path d="M0 0 519.6 300 0 600z" fill="#FFFFFF"/>
+      <g fill="#FCD116">
+        <g transform="translate(173.2 300)">
+          <circle r="54"/>
+          <use href="#ph-ray"/>
+          <use href="#ph-ray" transform="rotate(45)"/>
+          <use href="#ph-ray" transform="rotate(90)"/>
+          <use href="#ph-ray" transform="rotate(135)"/>
+          <use href="#ph-ray" transform="rotate(180)"/>
+          <use href="#ph-ray" transform="rotate(225)"/>
+          <use href="#ph-ray" transform="rotate(270)"/>
+          <use href="#ph-ray" transform="rotate(315)"/>
+        </g>
+        <use href="#ph-star" transform="translate(52 66)"/>
+        <use href="#ph-star" transform="translate(52 534)"/>
+        <use href="#ph-star" transform="translate(452 300) rotate(90)"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#workspace">Skip to tools</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Kabayan-Tambayan Tools home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40">
+            <path d="M6 27a14 14 0 0 1 28 0z" fill="var(--gold)"/>
+            <path d="M17 13.5h6V27h-6z" fill="var(--clay)"/>
+            <rect x="3" y="27" width="34" height="5" rx="2.5" fill="var(--clay-deep)"/>
+            <path d="M10 24l3-3 3 3-3 3zM24 24l3-3 3 3-3 3z" fill="var(--bamboo)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Kabayan-Tambayan</strong>
+          <span>Tools</span>
+        </span>
+        <svg class="brand-flag" viewBox="0 0 1200 600" role="img" aria-label="Philippine flag"><use href="#ph-flag"/></svg>
+      </a>
+      <nav class="topnav" aria-label="Main">
+        <a href="#workspace">Toolbox</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch to dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+      </button>
+    </div>
+    <div class="weave-band" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="baybayin" aria-hidden="true">ᜃᜊᜌᜈ᜔</p>
+          <p class="eyebrow">Integration hub para sa bawat Pilipino</p>
+          <h1>Heavy-duty tools for every <span class="hl">kabayan</span>.</h1>
+          <p class="lede">Run transportation, data management, income and expense, and production analysis from one hub. Every app works right here, so you never have to leave the tambayan.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#workspace">Open the toolbox</a>
+            <a class="btn btn-ghost" href="#about">How it works</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>4</strong><span>project apps</span></li>
+            <li><strong>1</strong><span>shared workspace</span></li>
+            <li><strong>0</strong><span>tabs to juggle</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-art">
+          <svg viewBox="0 0 800 380" role="img" aria-labelledby="heroArtTitle">
+            <title id="heroArtTitle">Terracotta and gold heavy equipment (a tower crane lifting a balikbayan box, an excavator and a concrete mixer truck) working among geometric bamboo under a sunset</title>
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" style="stop-color:var(--sky-top)"/>
+                <stop offset="1" style="stop-color:var(--sky-bottom)"/>
+              </linearGradient>
+              <clipPath id="frame"><rect width="800" height="380" rx="28"/></clipPath>
+              <pattern id="weave" width="32" height="16" patternUnits="userSpaceOnUse">
+                <rect width="32" height="16" fill="#A0522D"/>
+                <path d="M0 8 8 0l8 8-8 8z" fill="#E6A100"/>
+                <path d="M16 8l8-8 8 8-8 8z" fill="#2E8B57"/>
+                <path d="M8 5l3 3-3 3-3-3zM24 5l3 3-3 3-3-3z" fill="#FDFBF7"/>
+              </pattern>
+              <g id="stalk">
+                <rect width="13" height="300" rx="3" fill="var(--bamboo)"/>
+                <rect y="40" width="13" height="4" fill="var(--bamboo-deep)"/>
+                <rect y="92" width="13" height="4" fill="var(--bamboo-deep)"/>
+                <rect y="144" width="13" height="4" fill="var(--bamboo-deep)"/>
+                <rect y="196" width="13" height="4" fill="var(--bamboo-deep)"/>
+                <rect y="248" width="13" height="4" fill="var(--bamboo-deep)"/>
+                <path d="M13 42l26-12-14 20zM0 94l-24-14 10 22z" fill="var(--bamboo)"/>
+              </g>
+              <ellipse id="drumShape" cx="678" cy="258" rx="54" ry="29" transform="rotate(-14 678 258)"/>
+              <clipPath id="drumClip"><use href="#drumShape"/></clipPath>
+            </defs>
+
+            <g clip-path="url(#frame)">
+              <rect width="800" height="380" fill="url(#sky)"/>
+              <circle cx="560" cy="120" r="92" fill="var(--sun)" opacity=".22"/>
+              <circle cx="560" cy="120" r="64" fill="var(--sun)" opacity=".9"/>
+
+              <!-- Banahaw-style ridges -->
+              <path d="M0 250 110 170l70 40 120-92 110 98 90-62 110 70 90-56 100 60v90H0z" fill="var(--bamboo-deep)" opacity=".45"/>
+              <path d="M0 290l140-60 90 34 130-50 120 52 110-36 100 40 110-30v80H0z" fill="var(--bamboo)" opacity=".55"/>
+
+              <!-- Geometric bamboo groves -->
+              <use href="#stalk" x="18" y="40"/>
+              <use href="#stalk" x="44" y="76"/>
+              <use href="#stalk" x="70" y="118"/>
+              <use href="#stalk" x="728" y="60"/>
+              <use href="#stalk" x="752" y="24"/>
+              <use href="#stalk" x="776" y="96"/>
+
+              <!-- Ground with Inabel band -->
+              <rect y="318" width="800" height="62" fill="var(--ground)"/>
+              <rect y="318" width="800" height="16" fill="url(#weave)"/>
+
+              <!-- Philippine flag on a pole -->
+              <g class="hero-flagpole">
+                <rect x="208" y="96" width="5" height="222" rx="2" fill="#3a2a1f"/>
+                <circle cx="210.5" cy="93" r="5" fill="#FCD116"/>
+                <g class="hero-flag"><use href="#ph-flag" x="213" y="100" width="84" height="42"/></g>
+              </g>
+
+              <!-- Tower crane -->
+              <g class="crane">
+                <rect x="140" y="78" width="20" height="240" fill="none" stroke="var(--gold)" stroke-width="4"/>
+                <polyline points="140,78 160,98 140,118 160,138 140,158 160,178 140,198 160,218 140,238 160,258 140,278 160,298 140,318" fill="none" stroke="var(--gold)" stroke-width="3"/>
+                <path d="M140 66 150 26l10 40z" fill="var(--gold)"/>
+                <path d="M150 28 344 68M150 28 86 68" stroke="var(--gold-deep)" stroke-width="2.5"/>
+                <rect x="80" y="66" width="272" height="12" rx="2" fill="var(--gold)"/>
+                <path d="M90 72h250" stroke="var(--gold-deep)" stroke-width="2" stroke-dasharray="6 6"/>
+                <rect x="84" y="78" width="36" height="24" rx="3" fill="var(--clay-deep)"/>
+                <rect x="160" y="78" width="24" height="20" rx="3" fill="var(--clay)"/>
+                <rect x="165" y="82" width="14" height="9" rx="1.5" fill="#FCE3B0"/>
+                <rect x="288" y="78" width="20" height="7" rx="2" fill="var(--clay-deep)"/>
+                <g class="crane-load">
+                  <line x1="298" y1="85" x2="298" y2="180" stroke="#3a2a1f" stroke-width="2"/>
+                  <path d="M292 180h12l-2 8h-8z" fill="#3a2a1f"/>
+                  <path d="M298 188 270 204M298 188l28 16" stroke="#3a2a1f" stroke-width="1.5"/>
+                  <rect x="266" y="204" width="64" height="48" rx="3" fill="#C99A68"/>
+                  <rect x="266" y="222" width="64" height="10" fill="url(#weave)"/>
+                  <rect x="266" y="204" width="64" height="48" rx="3" fill="none" stroke="#8B5E3C" stroke-width="2"/>
+                  <text x="298" y="246" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="9" fill="#5a3a22" letter-spacing="1">BALIKBAYAN</text>
+                </g>
+              </g>
+
+              <!-- Excavator -->
+              <g class="excavator">
+                <path d="M470 252 540 192" stroke="#3a2a1f" stroke-width="6" stroke-linecap="round"/>
+                <path d="M500 246 562 160" stroke="var(--gold)" stroke-width="20" stroke-linecap="round"/>
+                <path d="M562 160 600 246" stroke="var(--gold-deep)" stroke-width="14" stroke-linecap="round"/>
+                <path d="M558 172 590 214" stroke="#3a2a1f" stroke-width="4" stroke-linecap="round"/>
+                <path d="M588 240 620 250 612 282Q598 292 582 276z" fill="var(--clay-deep)"/>
+                <path d="M612 282l6 6M604 286l3 7M594 286l0 7" stroke="var(--clay-deep)" stroke-width="3" stroke-linecap="round"/>
+                <rect x="370" y="286" width="164" height="32" rx="16" fill="#3a2a1f"/>
+                <g fill="#7a6152">
+                  <circle cx="388" cy="302" r="9"/><circle cx="414" cy="302" r="7"/><circle cx="440" cy="302" r="7"/>
+                  <circle cx="466" cy="302" r="7"/><circle cx="492" cy="302" r="7"/><circle cx="516" cy="302" r="9"/>
+                </g>
+                <rect x="410" y="276" width="84" height="12" fill="#3a2a1f"/>
+                <rect x="384" y="234" width="138" height="46" rx="8" fill="var(--clay)"/>
+                <rect x="384" y="262" width="138" height="9" fill="url(#weave)"/>
+                <path d="M394 236V190q0-7 7-7h40l15 53z" fill="var(--clay-deep)"/>
+                <path d="M401 191h35l11 38h-46z" fill="#FCE3B0" opacity=".9"/>
+                <rect x="470" y="222" width="8" height="14" rx="2" fill="#3a2a1f"/>
+              </g>
+
+              <!-- Concrete mixer truck -->
+              <g class="mixer">
+                <rect x="624" y="288" width="168" height="12" rx="3" fill="#3a2a1f"/>
+                <path d="M640 290 652 266l12 24z" fill="#3a2a1f"/>
+                <use href="#drumShape" fill="var(--gold)"/>
+                <g clip-path="url(#drumClip)" stroke="var(--clay)" stroke-width="8" class="drum-stripes">
+                  <path d="M630 220l26 80M660 214l26 80M690 208l26 80M720 202l26 80"/>
+                </g>
+                <use href="#drumShape" fill="none" stroke="var(--gold-deep)" stroke-width="3"/>
+                <path d="M628 252 608 270" stroke="var(--clay-deep)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M736 290v-44q0-6 6-6h30l20 24v26z" fill="var(--clay)"/>
+                <path d="M743 247h26l13 17h-39z" fill="#FCE3B0"/>
+                <rect x="736" y="272" width="56" height="7" fill="url(#weave)"/>
+                <g>
+                  <circle cx="652" cy="304" r="14" fill="#2a1f18"/><circle cx="652" cy="304" r="5" fill="var(--gold)"/>
+                  <circle cx="690" cy="304" r="14" fill="#2a1f18"/><circle cx="690" cy="304" r="5" fill="var(--gold)"/>
+                  <circle cx="766" cy="304" r="14" fill="#2a1f18"/><circle cx="766" cy="304" r="5" fill="var(--gold)"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration workspace -->
+    <section id="workspace" class="workspace-section">
+      <div class="wrap hub-layout">
+       <div class="hub-main">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Active integration workspace</p>
+            <h2>Ang Toolbox</h2>
+            <p class="section-sub">Connect each card to its deployed app once, then launch it to work inline.</p>
+          </div>
+          <div class="filters" role="search">
+            <div id="catFilters" class="chip-row" role="group" aria-label="Filter by category"></div>
+            <label class="search">
+              <span class="sr-only">Search tools</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <input id="toolSearch" type="search" placeholder="Hanapin… search tools" autocomplete="off">
+            </label>
+          </div>
+        </div>
+        <div id="toolGrid" class="tool-grid-main"></div>
+        <p id="emptyState" class="empty-state" hidden>Walang nahanap. No tools match that search.</p>
+       </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Sidebar">
+          <section class="side-panel" aria-labelledby="modulesTitle">
+            <h2 id="modulesTitle" class="side-title">Mga Module <span>Quick launch</span></h2>
+            <ul id="sideModules" class="side-modules"></ul>
+          </section>
+
+          <section class="side-panel news" aria-labelledby="newsTitle">
+            <div class="side-head">
+              <h2 id="newsTitle" class="side-title">
+                <svg class="side-flag" viewBox="0 0 1200 600" aria-hidden="true"><use href="#ph-flag"/></svg>
+                Balita <span>Philippine news</span>
+              </h2>
+              <button id="newsRefresh" class="icon-btn icon-btn-sm" type="button" aria-label="Refresh news">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6"/></svg>
+              </button>
+            </div>
+            <div id="newsTopics" class="news-topics" role="group" aria-label="News topic"></div>
+            <div id="newsList" class="news-list" aria-live="polite" aria-busy="true"></div>
+            <p id="newsMeta" class="news-meta"></p>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap about-inner">
+        <div class="divider-weave" aria-hidden="true"></div>
+        <div class="about-grid">
+          <div>
+            <h2>Built like a tambayan</h2>
+            <p>A tambayan is the place where everyone gathers. This hub works the same way: every tool sits in one shared workspace, shares one look, and runs without sending you elsewhere.</p>
+          </div>
+          <dl class="about-list">
+            <div><dt>1 · Connect</dt><dd>Open a card and paste the URL of that project's deployed app, or set it once for everyone in the project manifest.</dd></div>
+            <div><dt>2 · Launch</dt><dd>The app loads inside its card. Reload it, go fullscreen or pop it out to a new tab from the card's toolbar.</dd></div>
+            <div><dt>3 · Stay in the tambayan</dt><dd>Open several apps at once and switch between them without leaving the hub.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="weave-band" aria-hidden="true"></div>
+    <div class="wrap footer-inner">
+      <p class="footer-brand"><svg class="footer-flag" viewBox="0 0 1200 600" aria-hidden="true"><use href="#ph-flag"/></svg><strong>Kabayan-Tambayan Tools</strong> · Gawa nang may puso para sa mga Pilipino saan man.</p>
+      <p class="muted">Photo credits are shown on each card.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>
