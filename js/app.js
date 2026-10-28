@@ -48,7 +48,8 @@
       focus: '50% 22%',
       credit: '',
       summary: 'Store, approve and organize records in one place. Connect your data management system to review and update entries inline.',
-      embedUrl: ''
+      // ?embed=true skips Streamlit's auth redirect, which fails inside a cross-site iframe.
+      embedUrl: 'https://dental-management-dashboard.streamlit.app/?embed=true'
     },
     {
       id: 'finance',
