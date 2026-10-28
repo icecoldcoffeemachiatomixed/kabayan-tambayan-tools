@@ -61,6 +61,7 @@
       credit: '',
       summary: 'Record earnings and spending, follow cash flow and check balances. Connect your income and expense tracker to work with it here.',
       embedUrl: '',
+      downloadsDisabled: true,
       downloads: [
         {
           label: 'Windows Installer',
@@ -153,11 +154,15 @@
           ${t.downloads ? `
           <div class="downloads">
             <span class="downloads-title">Download for Windows · v1.0.0</span>
-            ${t.downloads.map((d) => `
-              <a class="download-link" href="${esc(d.url)}" rel="noopener" title="SHA-256: ${esc(d.sha256)}">
+            ${t.downloads.map((d) => {
+              const body = `
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
-                <span>${esc(d.label)}<small>${esc(d.meta)}</small></span>
-              </a>`).join('')}
+                <span>${esc(d.label)}<small>${esc(d.meta)}</small></span>`;
+              // Disabled downloads render without an href so there is nothing to click or copy.
+              return t.downloadsDisabled
+                ? `<span class="download-link is-disabled" aria-disabled="true" title="Download unavailable">${body}</span>`
+                : `<a class="download-link" href="${esc(d.url)}" rel="noopener" title="SHA-256: ${esc(d.sha256)}">${body}</a>`;
+            }).join('')}
           </div>` : ''}
           <div class="card-actions">
             <button class="btn btn-primary js-launch" type="button" aria-expanded="false" aria-controls="ws-${t.id}"></button>
