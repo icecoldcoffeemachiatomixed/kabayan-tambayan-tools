@@ -87,8 +87,7 @@
       focus: '50% 14%',
       credit: 'Alden Anderson · 360nomad.org',
       summary: 'Measure output, yields and performance over time. Connect your production analysis dashboard to review results side by side with your other apps.',
-      // ?embed=true skips Streamlit's auth redirect, which fails inside a cross-site iframe.
-      embedUrl: 'https://dental-management-dashboard.streamlit.app/?embed=true'
+      embedUrl: 'https://remittance-ar-dashboard.web.app/'
     }
   ];
 
