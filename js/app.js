@@ -47,7 +47,7 @@
       image: 'assets/images/planting.jpg',
       focus: '50% 22%',
       credit: '',
-      summary: 'Store, approve and organize records in one place. Connect your data management system to review and update entries inline.',
+      summary: 'maps every column automatically — providers, payers, chairs and procedure codes — and returns synchronized dashboards in seconds.',
       embedUrl: 'https://dental-dashboard-17a88.web.app/'
     },
     {
